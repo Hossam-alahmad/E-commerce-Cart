@@ -1,0 +1,62 @@
+button.btn:focus {
+    box-shadow: none;
+}
+.cart-app .navbar {
+    background-color: vaR(--second-color);
+}
+.cart-app .navbar .logo a {
+    display: block;
+    color: #fff;
+}
+.cart-app .navbar .logo a::first-letter {
+    color: var(--primary-color);
+}
+.cart-app .navbar .nav .cart-icon::before {
+    content: attr(data-value);
+    position: absolute;
+    top: 0;
+    right: -10px;
+    background-color: var(--primary-color);
+    font-size: 0.8rem;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+}
+.cart-app .cart .content .item {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.cart-app .cart .circle {
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 5px solid;
+    border-top-color: #eee !important;
+    border-right-color: #eee !important;
+    border-radius: 50%;
+    animation: loading 0.4s linear infinite;
+}
+@keyframes loading {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.cart-app .cart .content .item:hover {
+    background-color: #eee;
+}
+.cart-app .cart .content .item .title {
+    flex: 50%;
+}
+.cart-app .cart .content .item .title .info,
+.cart-app .cart .content .item .price,
+.cart-app .cart .content .item .amount {
+    font-weight: 500;
+}
+.cart-app .cart .content .item .price,
+.cart-app .cart .content .item .amount {
+    flex: 25%;
+}
